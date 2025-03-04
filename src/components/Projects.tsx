@@ -1,4 +1,4 @@
-export default function Navbar(){
+export default function Projects(){
     return (
         <h1>Placeholder</h1>
     );
