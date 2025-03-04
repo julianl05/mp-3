@@ -17,6 +17,12 @@ const StyledOrganisationLocationDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between; /* using space between to make the location be to the far left but on the same line as the organisation name*/
+
+    @media screen and (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `
 const StyledTitleDateDiv = styled.div`
     display: flex;
@@ -24,6 +30,9 @@ const StyledTitleDateDiv = styled.div`
     justify-content: space-between; 
     @media screen and (max-width: 800px) {
         margin-bottom: 1vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 `
 const StyledH4 = styled.h4`
