@@ -8,14 +8,6 @@ const StyledHeader = styled.header`
     font-size: calc(1px + 1vw);
 `
 
-const StyledH1 = styled.h1`
-
-`
-
-const StyledP = styled.p`
-
-`
-
 
 export default function Header() {
     return (

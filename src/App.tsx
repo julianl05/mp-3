@@ -17,8 +17,11 @@ const StyledPageWraper = styled.div`
 `
 
 const StyledContentContainer = styled.div`
-
+  display: flex; 
+  flex-direction: row; 
 `
+
+
 function Root(){
   return(
     <StyledPageWraper>
@@ -26,7 +29,7 @@ function Root(){
       <StyledContentContainer>
         <Navbar/>
         <Routes>
-          <Route path={`/`} element={<Home />} />
+          <Route path={`/*`} element={<Home />} />
           <Route path={`/education`} element={<Education />} />
           <Route path={`/experiences`} element={<Experiences />} />
           <Route path={`/projects`} element={<Projects />} />
