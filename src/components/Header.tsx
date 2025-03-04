@@ -6,6 +6,11 @@ const StyledHeader = styled.header`
     width: 100%; 
     color: #EEEEEE;
     font-size: calc(1px + 1vw);
+
+    @media screen and (max-width: 800px) {
+        text-align: center;
+        font-size: calc(5px + 2vw);
+    }
 `
 
 

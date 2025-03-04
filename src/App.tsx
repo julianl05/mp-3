@@ -19,6 +19,10 @@ const StyledPageWraper = styled.div`
 const StyledContentContainer = styled.div`
   display: flex; 
   flex-direction: row; 
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `
 
 
