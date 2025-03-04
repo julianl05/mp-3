@@ -13,7 +13,7 @@ export default function Header() {
     return (
         <StyledHeader>
             <h1>Julian Lim Jun Ren</h1>
-            <p>Online Resume</p>
+            <p>My Online Resume</p>
         </StyledHeader>
     );
 }
