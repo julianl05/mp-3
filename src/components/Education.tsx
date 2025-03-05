@@ -24,9 +24,7 @@ const StyledH4 = styled.h4`
         text-align: center;
     }
 `
-const p = styled.p`
-    margin-left: 1vw;
-`
+
 export default function Education(){
     return (
         <StyledMain>
