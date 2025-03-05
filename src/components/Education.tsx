@@ -12,6 +12,10 @@ const StyledEducationContainer = styled.div`
     background-color: #ffffff;
     padding: 4%;
     border-radius: 10px;
+
+    p {
+        margin-left: 1vw;
+    }
 `
 const StyledH4 = styled.h4`
     margin-bottom: 1vh;
@@ -20,7 +24,7 @@ const StyledH4 = styled.h4`
         text-align: center;
     }
 `
-const StyledP = styled.p`
+const p = styled.p`
     margin-left: 1vw;
 `
 export default function Education(){
@@ -30,22 +34,22 @@ export default function Education(){
             <StyledEducationSection>
                 <StyledEducationContainer>
                     <StyledH4>Boston University</StyledH4>
-                    <StyledP><strong>Location: </strong> Boston, Massachusetts, USA </StyledP>
-                    <StyledP><strong>Degree: </strong>BA in Computer Science, Statistics Minor</StyledP>
-                    <StyledP><strong>Graduation Date: </strong>Expected May 2026</StyledP>
-                    <StyledP><strong>GPA: </strong>4.00</StyledP>
-                    <StyledP><strong>Dean's List: </strong>All Semesters</StyledP>
-                    <StyledP><strong>Relevant Coursework: </strong>
+                    <p><strong>Location: </strong> Boston, Massachusetts, USA </p>
+                    <p><strong>Degree: </strong>BA in Computer Science, Statistics Minor</p>
+                    <p><strong>Graduation Date: </strong>Expected May 2026</p>
+                    <p><strong>GPA: </strong>4.00</p>
+                    <p><strong>Dean's List: </strong>All Semesters</p>
+                    <p><strong>Relevant Coursework: </strong>
                         Data Structures & Algorithms, Software Engineering, Artificial Intelligence, Linear Algebra, 
                         Combinatoric Structures, Algorithmic Analysis, Distributed Systems, Operating Systems, Object-Oriented Programming, Statistical Analysis
-                    </StyledP>
+                    </p>
                 </StyledEducationContainer>
                 <StyledEducationContainer>
                     <StyledH4>Shanghai American School</StyledH4>
-                    <StyledP><strong>Location: </strong> Shanghai, China </StyledP>
-                    <StyledP><strong>Degree: </strong>HS Diploma</StyledP>
-                    <StyledP><strong>Graduation Date: </strong>May 2022</StyledP>
-                    <StyledP><strong>GPA: </strong>3.98</StyledP>
+                    <p><strong>Location: </strong> Shanghai, China </p>
+                    <p><strong>Degree: </strong>HS Diploma</p>
+                    <p><strong>Graduation Date: </strong>May 2022</p>
+                    <p><strong>GPA: </strong>3.98</p>
                 </StyledEducationContainer>
             </StyledEducationSection>
         </StyledMain>

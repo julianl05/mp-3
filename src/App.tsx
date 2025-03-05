@@ -7,7 +7,7 @@ import Footer from "./components/Footer"
 import Home from "./components/Home"
 import Education from "./components/Education"
 import Experiences from "./components/Experiences"
-import Projects from "./components/Projects"
+import Projects from "./components/Projects/Projects"
 import Skills from "./components/Skills"
 import Activities from "./components/Activities"
 
