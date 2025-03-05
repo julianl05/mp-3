@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useState} from "react";
 
 const StyledCalculatorContainer = styled.div`
     background-color: #ffffff;
@@ -32,7 +33,7 @@ const StyledInputContainer = styled.div`
     
     @media screen and (max-width: 800px) {
         flex-direction: column;
-        
+
         input {
             width: 50vw;
             height: 10vw;
@@ -96,19 +97,17 @@ const StyledClearButton = styled.button`
     }
 `
 
-const StyledOutputContainer = styled.div`
+const StyledOutputContainer = styled.div<{outputColor: string}>`
     border: 5px solid #283738;
     border-radius: 10px;
     width: 75%;
     height: 5vw;
     background-color: #283738;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
     h3 {
         font-size: calc(5px + 2vw);
-        color: #EEEEEE;
+        color: ${(props) => props.outputColor};
+        text-align: center;
     }
     
     @media screen and (max-width: 800px) {
@@ -119,12 +118,86 @@ const StyledOutputContainer = styled.div`
 `
 
 export default function Calculator(){
+    const [output, setOutput] = useState<number | null>(null); /* <number | null> asserts the type as either a number or null (its null when reset)*/
+    const [outputColor, setOutputColor] = useState<string>('#EEEEEE');
+    const [firstNum, setFirstNum] = useState<string>(""); 
+    const [secondNum, setSecondNum] = useState<string>("");
+
+    function addition(): void {
+        const result: number = Number(firstNum) + Number(secondNum);
+        if (result < 0) {
+            setOutputColor('red');
+        } else {
+            setOutputColor('#EEEEEE');
+        }
+        setOutput(result);
+    }
+    
+    function subtraction(): void {
+        const result: number = Number(firstNum) - Number(secondNum);
+        if (result < 0) {
+            setOutputColor('red');
+        } else {
+            setOutputColor('#EEEEEE');
+        }
+        setOutput(result);
+    }
+    
+    function multiplication(): void {
+        const result: number = Number(firstNum) * Number(secondNum);
+        if (result < 0) {
+            setOutputColor('red');
+        } else {
+            setOutputColor('#EEEEEE');
+        }
+        setOutput(result);
+    }
+    
+    function division(): void{
+        const result: number = Number(firstNum) / Number(secondNum);
+        if (result < 0) {
+            setOutputColor('red');
+        } else {
+            setOutputColor('#EEEEEE');
+        }
+        setOutput(result);
+    }
+    
+    function power(): void {
+        let first: number = Number(firstNum);
+        let second: number = Number(secondNum);
+        let result: number = 1;
+
+        if (second < 0) {
+            first = 1 / first;
+            second *= -1;
+        } 
+
+        for (let i: number = 0; i < second; i++) {
+            result *= first;
+        }
+
+        if (result < 0) {
+            setOutputColor('red');
+        } else {
+            setOutputColor('#EEEEEE');
+        }
+        setOutput(result);
+    }
+    
+    function reset(){
+        setFirstNum("");
+        setSecondNum("");
+        setOutput(null);
+        setOutputColor('#EEEEEE');
+    }
+
     return (
         <StyledCalculatorContainer>
             <h4>JavaScript Calculator</h4>
             <StyledInputContainer>
-                <input type="text" id="first-num"/>
-                <input type="text" id="second-num"/>
+                <input type="number" value={firstNum} onChange={(e)=>setFirstNum((e.target.value))}/>
+                <input type="number" value={secondNum} onChange={(e)=>setSecondNum((e.target.value))}/>
             </StyledInputContainer>
             <StyledButtonsContainer>
                 <button onClick={addition}> + </button>
@@ -133,8 +206,8 @@ export default function Calculator(){
                 <button onClick={division}> / </button>
                 <button onClick={power}> ^ </button>
             </StyledButtonsContainer>
-            <StyledOutputContainer>
-                <h3 id="output"></h3>
+            <StyledOutputContainer outputColor={outputColor}>
+                <h3>{output}</h3>
             </StyledOutputContainer>
             <StyledClearButton onClick={reset}> CLEAR </StyledClearButton>
         </StyledCalculatorContainer>
