@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledMain, StyledH3Title } from "../SharedStyles";
+import { StyledMain, StyledH3Title } from "../ui-components/sharedStyledComponents";
 import Calculator from "./Calculator";
 
 const StyledProjectsSection = styled.div`
