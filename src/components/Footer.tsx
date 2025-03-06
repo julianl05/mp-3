@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router";
 
 const StyledFooter = styled.footer`
     width: 100%;
@@ -6,14 +7,14 @@ const StyledFooter = styled.footer`
     padding: 1vh 1vw;
     color: #ffffff;
 `
-const StyledA = styled.a`
+const StyledLink = styled(Link)`
     color: #ffffff;
 `
 
 export default function Footer(){
     return (
         <StyledFooter>
-            <p>All Rights Reserved by Julian Lim Jun Ren. <StyledA href="credits.html"> Credits</StyledA> &copy;</p>
+            <p>All Rights Reserved by Julian Lim Jun Ren. <StyledLink to={`/credits`}> Credits</StyledLink> &copy;</p>
         </StyledFooter>
     );
 }
