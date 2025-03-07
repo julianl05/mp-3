@@ -1,5 +1,6 @@
 import styled from "styled-components"; 
 import {StyledMain, StyledH3Title} from "./ui-components/sharedStyledComponents";
+import { useEffect } from "react";
 
 const StyledEducationSection = styled.div`
     display: flex;
@@ -26,6 +27,10 @@ const StyledH4 = styled.h4`
 `
 
 export default function Education(){
+    useEffect(() => {
+        document.title = "Resume | Education";
+    }, []);
+
     return (
         <StyledMain>
             <StyledH3Title>Educational Record</StyledH3Title>

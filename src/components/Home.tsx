@@ -1,5 +1,6 @@
 import styled from "styled-components"; 
 import {StyledMain, StyledH3Title} from "./ui-components/sharedStyledComponents";
+import { useEffect } from "react";
 
 const StyledProfileContainer = styled.div`
     width: 100%;
@@ -52,6 +53,9 @@ const StyledIntroText = styled.p`
 
 
 export default function Home(){
+    useEffect(() => {
+        document.title = "Resume | Home";
+    }, []);
     return (
         <StyledMain>
             <StyledH3Title>Home</StyledH3Title>

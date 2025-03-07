@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { StyledMain, StyledH3Title } from "../ui-components/sharedStyledComponents";
 import Calculator from "./Calculator";
+import { useEffect } from "react";
 
 const StyledProjectsSection = styled.div`
     display: flex;
@@ -112,6 +113,9 @@ const StyledProjectThumbnail = styled.img`
 `
 
 export default function Projects(){
+    useEffect(() => {
+        document.title = "Resume | Projects";
+    }, []);
     return (
         <StyledMain>
             <StyledH3Title>Projects</StyledH3Title>

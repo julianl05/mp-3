@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { StyledMain, StyledH3Title } from "./ui-components/sharedStyledComponents";
+import { useEffect } from "react";
 
 const StyledActivitiesSection = styled.div`
     display: flex;
@@ -44,6 +45,9 @@ const StyledActivitiesContainer = styled.div`
 
 
 export default function Activities(){
+    useEffect(() => {
+        document.title = "Resume | Activities";
+    }, []);
     return (
         <StyledMain>
             <StyledH3Title>Activities</StyledH3Title>

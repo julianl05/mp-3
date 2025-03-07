@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { StyledMain, StyledH3Title } from "./ui-components/sharedStyledComponents";
+import { useEffect } from "react";
 
 const StyledExperiencesSection = styled.div`
     display: flex;
@@ -41,6 +42,9 @@ const StyledH4 = styled.h4`
 `
 
 export default function Experiences(){
+    useEffect(() => {
+        document.title = "Resume | Experiences";
+    }, []);
     return (
         <StyledMain>
             <StyledH3Title>Work Experience</StyledH3Title>

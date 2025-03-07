@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {StyledMain, StyledH3Title} from "./ui-components/sharedStyledComponents";
+import { useEffect } from "react";
 
 const StyledSkillsContainer = styled.div`
     display: flex;
@@ -39,6 +40,9 @@ const StyledSkillsTable = styled.table`
 
 
 export default function Skills(){
+    useEffect(() => {
+        document.title = "Resume | Skills";
+    }, []);
     return (
         <StyledMain>
             <StyledSkillsContainer>
